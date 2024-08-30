@@ -213,7 +213,7 @@ photoSizeEmpty#e17e23c type:string = PhotoSize;
 photoSize#75c78e60 type:string w:int h:int size:int = PhotoSize;
 photoCachedSize#21e1ad6 type:string w:int h:int bytes:bytes = PhotoSize;
 photoStrippedSize#e0b0bc2e type:string bytes:bytes = PhotoSize;
-photoSizeProgressive#fa3efb95 type:string w:int h:int sizes:Vector<int> size:int = PhotoSize;
+photoSizeProgressive#fa3efb95 type:string w:int h:int sizes:Vector<int> = PhotoSize;
 photoPathSize#d8214d41 type:string bytes:bytes = PhotoSize;
 
 geoPointEmpty#1117dd5f = GeoPoint;
