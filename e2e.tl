@@ -112,7 +112,7 @@ sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
 sendMessageUploadRoundAction#bb718624 = SendMessageAction;
 
 // layer 73
-decryptedMessage#91cc4674 flags:# silent:flags.5?true random_id:long ttl:int message:string media:flags.9?DecryptedMessageMedia entities:flags.7?MessageEntity via_bot_name:flags.11?string reply_to_random_id:flags.3?long grouped_id:flags.17?long = DecryptedMessage;
+decryptedMessage#91cc4674 flags:# silent:flags.5?true random_id:long ttl:int message:string media:flags.9?DecryptedMessageMedia entities:flags.7?Vector<ArrayList> via_bot_name:flags.11?string reply_to_random_id:flags.3?long grouped_id:flags.17?long = DecryptedMessage;
 
 // layer 101
 messageEntityUnderline#9c4e7e8b offset:int length:int = MessageEntity;
