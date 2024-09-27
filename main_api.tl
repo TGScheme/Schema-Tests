@@ -114,7 +114,7 @@ chatForbidden#6592a1a7 id:long title:string = Chat;
 channel#fe4478bd flags:# creator:flags.0?true left:flags.2?true broadcast:flags.5?true verified:flags.7?true megagroup:flags.8?true restricted:flags.9?true signatures:flags.11?true min:flags.12?true scam:flags.19?true has_link:flags.20?true has_geo:flags.21?true slowmode_enabled:flags.22?true call_active:flags.23?true call_not_empty:flags.24?true fake:flags.25?true gigagroup:flags.26?true noforwards:flags.27?true join_to_send:flags.28?true join_request:flags.29?true forum:flags.30?true flags2:# stories_hidden:flags2.1?true stories_hidden_min:flags2.2?true stories_unavailable:flags2.3?true signature_profiles:flags2.12?true id:long access_hash:flags.13?long title:string username:flags.6?string photo:ChatPhoto date:int restriction_reason:flags.9?Vector<RestrictionReason> admin_rights:flags.14?ChatAdminRights banned_rights:flags.15?ChatBannedRights default_banned_rights:flags.18?ChatBannedRights participants_count:flags.17?int usernames:flags2.0?Vector<Username> stories_max_id:flags2.4?int color:flags2.7?PeerColor profile_color:flags2.8?PeerColor emoji_status:flags2.9?EmojiStatus level:flags2.10?int subscription_until_date:flags2.11?int = Chat;
 channelForbidden#17d493d5 flags:# broadcast:flags.5?true megagroup:flags.8?true id:long access_hash:long title:string until_date:flags.16?int = Chat;
 
-chatFull#2633421b flags:# can_set_username:flags.7?true has_scheduled:flags.8?true translations_disabled:flags.19?true id:long about:string participants:ChatParticipants chat_photo:flags.2?Photo notify_settings:PeerNotifySettings exported_invite:flags.13?ChatInviteExported bot_info:flags.3?Vector<Bots.BotInfo> pinned_msg_id:flags.6?int folder_id:flags.11?int call:flags.12?InputGroupCall ttl_period:flags.14?int groupcall_default_join_as:flags.15?Peer theme_emoticon:flags.16?string requests_pending:flags.17?int recent_requesters:flags.17?Vector<long> available_reactions:flags.18?ChatReactions reactions_limit:flags.20?int = ChatFull;
+chatFull#2633421b flags:# can_set_username:flags.7?true has_scheduled:flags.8?true translations_disabled:flags.19?true id:long about:string participants:ChatParticipants chat_photo:flags.2?Photo notify_settings:PeerNotifySettings exported_invite:flags.13?ChatInviteExported bot_info:flags.3?Vector<BotInfo> pinned_msg_id:flags.6?int folder_id:flags.11?int call:flags.12?InputGroupCall ttl_period:flags.14?int groupcall_default_join_as:flags.15?Peer theme_emoticon:flags.16?string requests_pending:flags.17?int recent_requesters:flags.17?Vector<long> available_reactions:flags.18?ChatReactions reactions_limit:flags.20?int = ChatFull;
 channelFull#bbab348d flags:# can_view_participants:flags.3?true can_set_username:flags.6?true can_set_stickers:flags.7?true hidden_prehistory:flags.10?true can_set_location:flags.16?true has_scheduled:flags.19?true can_view_stats:flags.20?true blocked:flags.22?true flags2:# can_delete_channel:flags2.0?true antispam:flags2.1?true participants_hidden:flags2.2?true translations_disabled:flags2.3?true stories_pinned_available:flags2.5?true view_forum_as_messages:flags2.6?true restricted_sponsored:flags2.11?true can_view_revenue:flags2.12?true paid_media_allowed:flags2.14?true can_view_stars_revenue:flags2.15?true paid_reactions_available:flags2.16?true id:long about:string participants_count:flags.0?int admins_count:flags.1?int kicked_count:flags.2?int banned_count:flags.2?int online_count:flags.13?int read_inbox_max_id:int read_outbox_max_id:int unread_count:int chat_photo:Photo notify_settings:PeerNotifySettings exported_invite:flags.23?ExportedChatInvite bot_info:Vector<BotInfo> migrated_from_chat_id:flags.4?long migrated_from_max_id:flags.4?int pinned_msg_id:flags.5?int stickerset:flags.8?StickerSet available_min_id:flags.9?int folder_id:flags.11?int linked_chat_id:flags.14?long location:flags.15?ChannelLocation slowmode_seconds:flags.17?int slowmode_next_send_date:flags.18?int stats_dc:flags.12?int pts:int call:flags.21?InputGroupCall ttl_period:flags.24?int pending_suggestions:flags.25?Vector<string> groupcall_default_join_as:flags.26?Peer theme_emoticon:flags.27?string requests_pending:flags.28?int recent_requesters:flags.28?Vector<long> default_send_as:flags.29?Peer available_reactions:flags.30?ChatReactions reactions_limit:flags2.13?int stories:flags2.4?PeerStories wallpaper:flags2.7?WallPaper boosts_applied:flags2.8?int boosts_unrestrict:flags2.9?int emojiset:flags2.10?StickerSet = ChatFull;
 
 chatParticipant#c02d4007 user_id:long inviter_id:long date:int = ChatParticipant;
@@ -202,7 +202,7 @@ messageActionUserUpdatedPhoto#55555551 new_user_photo:UserProfilePhoto = Message
 messageActionTTLChange#55555552 ttl:int = MessageAction;
 messageActionCreatedBroadcastList#55555557 = MessageAction;
 messageActionLoginUnknownLocation#555555f5 title:string address:string = MessageAction;
-messageActionStarGift#9bb3ef44 flags:# name_hidden:flags.0?true saved:flags.2?true converted:flags.3?true gift:Stars.StarGift message:flags.1?string convert_stars:long = MessageAction;
+messageActionStarGift#9bb3ef44 flags:# name_hidden:flags.0?true saved:flags.2?true converted:flags.3?true gift:StarGift message:flags.1?string convert_stars:long = MessageAction;
 messageActionSetSameChatWallPaper#c0787d6d wallpaper:WallPaper = MessageAction;
 messageActionAttachMenuBotAllowed#e7e75f97 = MessageAction;
 
@@ -256,7 +256,7 @@ inputReportReasonFake#f5ddd6e7 = ReportReason;
 inputReportReasonIllegalDrugs#a8eb2be = ReportReason;
 inputReportReasonPersonalDetails#9ec7863d = ReportReason;
 
-userFull#1f58e369 flags:# blocked:flags.0?true phone_calls_available:flags.4?true phone_calls_private:flags.5?true can_pin_message:flags.7?true has_scheduled:flags.12?true video_calls_available:flags.13?true voice_messages_forbidden:flags.20?true translations_disabled:flags.23?true stories_pinned_available:flags.26?true blocked_my_stories_from:flags.27?true wallpaper_overridden:flags.28?true contact_require_premium:flags.29?true read_dates_private:flags.30?true flags2:# sponsored_enabled:flags2.7?true id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?Bots.BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme_emoticon:flags.15?string private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights premium_gifts:flags.19?Vector<PremiumGiftOption> wallpaper:flags.24?WallPaper stories:flags.25?Stories.PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int = UserFull;
+userFull#1f58e369 flags:# blocked:flags.0?true phone_calls_available:flags.4?true phone_calls_private:flags.5?true can_pin_message:flags.7?true has_scheduled:flags.12?true video_calls_available:flags.13?true voice_messages_forbidden:flags.20?true translations_disabled:flags.23?true stories_pinned_available:flags.26?true blocked_my_stories_from:flags.27?true wallpaper_overridden:flags.28?true contact_require_premium:flags.29?true read_dates_private:flags.30?true flags2:# sponsored_enabled:flags2.7?true id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme_emoticon:flags.15?string private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights premium_gifts:flags.19?Vector<PremiumGiftOption> wallpaper:flags.24?WallPaper stories:flags.25?PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int = UserFull;
 
 contact#145ade0b user_id:long mutual:Bool = Contact;
 
@@ -638,7 +638,7 @@ chatInviteExported#a22cbd96 flags:# revoked:flags.0?true permanent:flags.5?true 
 chatInvitePublicJoinRequests#ed107ab7 = ExportedChatInvite;
 
 chatInviteAlready#5a686d7c chat:Chat = ChatInvite;
-chatInvite#fe65389d flags:# channel:flags.0?true broadcast:flags.1?true public:flags.2?true megagroup:flags.3?true request_needed:flags.6?true verified:flags.7?true scam:flags.8?true fake:flags.9?true can_refulfill_subscription:flags.11?true title:string about:flags.5?string photo:Photo participants_count:int participants:flags.4?Vector<User> color:int subscription_pricing:flags.10?StarsSubscriptionPricing subscription_form_id:flags.12?long = ChatInvite;
+chatInvite#fe65389d flags:# channel:flags.0?true broadcast:flags.1?true public:flags.2?true megagroup:flags.3?true request_needed:flags.6?true verified:flags.7?true scam:flags.8?true fake:flags.9?true can_refulfill_subscription:flags.11?true title:string about:flags.5?string participants_count:int participants:flags.4?Vector<User> color:int subscription_pricing:flags.10?StarsSubscriptionPricing subscription_form_id:flags.12?long = ChatInvite;
 chatInvitePeek#61695cb0 chat:Chat expires:int = ChatInvite;
 
 inputStickerSetEmpty#ffb62b95 = InputStickerSet;
@@ -1198,7 +1198,7 @@ help.supportName#8c05f1c9 name:string = help.SupportName;
 help.userInfoEmpty#f3ae2eed = help.UserInfo;
 help.userInfo#1eb3758 message:string entities:Vector<MessageEntity> author:string date:int = help.UserInfo;
 
-pollAnswer#ff16e2ca text:TextWithEntities option:bytes = PollAnswer;
+pollAnswer#6ca9c2e9 = PollAnswer;
 
 poll#58747131 id:long flags:# closed:flags.0?true public_voters:flags.1?true multiple_choice:flags.2?true quiz:flags.3?true question:TextWithEntities answers:Vector<PollAnswer> close_period:flags.4?int close_date:flags.5?int = Poll;
 
@@ -1604,7 +1604,7 @@ readParticipantDate#4a4ff172 user_id:long date:int = ReadParticipantDate;
 
 inputChatlistDialogFilter#f3e0da33 filter_id:int = InputChatlist;
 
-exportedChatlistInvite#c5181ac flags:# revoked:flags.0?true title:string url:string peers:Vector<RPC.Peer> = ExportedChatlistInvite;
+exportedChatlistInvite#c5181ac flags:# revoked:flags.0?true title:string url:string peers:Vector<Peer> = ExportedChatlistInvite;
 
 chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedChatlistInvite = chatlists.ExportedChatlistInvite;
 
@@ -1851,7 +1851,7 @@ starsTransactionPeerAds#60682812 = StarsTransactionPeer;
 
 starsTopupOption#bd915c0 flags:# extended:flags.1?true stars:long store_product:flags.0?string currency:string amount:long = StarsTopupOption;
 
-starsTransaction#a9ee4c2 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true subscription:flags.12?true stars:long date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?RPC.WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<RPC.MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift = StarsTransaction;
+starsTransaction#a9ee4c2 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true subscription:flags.12?true stars:long date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift = StarsTransaction;
 
 payments.starsStatus#bbfa316c flags:# balance:long subscriptions:flags.1?Vector<StarsSubscription> subscriptions_next_offset:flags.2?string subscriptions_missing_balance:flags.4?long history:flags.3?Vector<StarsTransaction> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.StarsStatus;
 
@@ -1893,7 +1893,7 @@ appWebViewResultUrl#3c1b4f0d url:string = AppWebViewResultUrl;
 
 messages.messageEmpty#3f4e0648 = messages.MessageEmpty;
 
-userStarGifts#6b65b517 flags:# count:int gifts:Vector<UserStarGift> next_offset:flags.0?string users:Vector<RPC.User> = UserStarGifts;
+userStarGifts#6b65b517 flags:# count:int gifts:Vector<UserStarGift> next_offset:flags.0?string users:Vector<User> = UserStarGifts;
 
 reportResultAddComment#6f09ac31 flags:# optional:flags.0?true option:bytes = ReportResult;
 reportResultReported#8db33c4b = ReportResult;
@@ -1910,11 +1910,11 @@ starGiftsNotModified#a388a368 = StarGifts;
 
 messages.webViewResult#aadf159b result:BotInlineResult users:Vector<User> = messages.WebViewResult;
 
-starGift#aea174ee flags:# limited:flags.0?true id:long sticker:RPC.Document stars:long availability_remains:flags.0?int availability_total:flags.0?int convert_stars:long = StarGift;
+starGift#aea174ee flags:# limited:flags.0?true id:long sticker:Document stars:long availability_remains:flags.0?int availability_total:flags.0?int convert_stars:long = StarGift;
 
 payments.paymentFormStarGift#b425cfe1 form_id:long invoice:Invoice = PaymentForm;
 
-userStarGift#eea49a6e flags:# name_hidden:flags.0?true unsaved:flags.5?true from_id:flags.1?long date:int gift:StarGift message:flags.2?RPC.TL.TextWithEntities msg_id:flags.3?int convert_stars:flags.4?long = UserStarGift;
+userStarGift#eea49a6e flags:# name_hidden:flags.0?true unsaved:flags.5?true from_id:flags.1?long date:int gift:StarGift message:flags.2?TextWithEntities msg_id:flags.3?int convert_stars:flags.4?long = UserStarGift;
 
 ---functions---
 
@@ -2319,11 +2319,11 @@ messages.togglePaidReactionPrivacy#849ad397 peer:InputPeer msg_id:int private:Bo
 messages.getPaidReactionPrivacy#472455aa = Updates;
 messages.getWebViewResult#22b6c214 peer:InputPeer bot:InputUser query_id:long = messages.WebViewResult;
 messages.forwardMessage#33963bf9 peer:InputPeer id:int random_id:long = Updates;
-messages.convertStarGift#421e027 user_id:RPC.InputUser msg_id:int = RPC.Bool;
-messages.getUserStarGifts#5e72c7e1 user_id:RPC.InputUser offset:string limit:int = UserStarGifts;
+messages.convertStarGift#421e027 user_id:InputUser msg_id:int = Bool;
+messages.getUserStarGifts#5e72c7e1 user_id:InputUser offset:string limit:int = UserStarGifts;
 messages.getStatsURL#812c2ae6 flags:# dark:flags.0?true peer:InputPeer params:string = StatsURL;
 messages.getAllChats#875f74be except_ids:Vector<long> = messages.Chats;
-messages.saveStarGift#87acf08e flags:# unsave:flags.0?true user_id:RPC.InputUser msg_id:int = RPC.Bool;
+messages.saveStarGift#87acf08e flags:# unsave:flags.0?true user_id:InputUser msg_id:int = Bool;
 messages.getStarGifts#c4563590 hash:int = StarGifts;
 messages.sendEncryptedMultiMedia#cacacaca = messages.SentEncryptedMessage;
 messages.setWebViewResult#e41cd11d query_id:long = Bool;
@@ -2483,7 +2483,7 @@ payments.launchPrepaidGiveaway#5ff58f20 peer:InputPeer giveaway_id:long purpose:
 payments.getStarsTopupOptions#c00ec7d3 = Vector<StarsTopupOption>;
 payments.getStarsStatus#104fcfa7 peer:InputPeer = payments.StarsStatus;
 payments.getStarsTransactions#69da4557 flags:# inbound:flags.0?true outbound:flags.1?true ascending:flags.2?true subscription_id:flags.3?string peer:InputPeer offset:string limit:int = payments.StarsStatus;
-payments.sendStarsForm#7998c914 form_id:long invoice:RPC.InputInvoice = payments.PaymentResult;
+payments.sendStarsForm#7998c914 form_id:long invoice:InputInvoice = payments.PaymentResult;
 payments.refundStarsCharge#25ae8f4a user_id:InputUser charge_id:string = Updates;
 payments.getStarsRevenueStats#d91ffad6 flags:# dark:flags.0?true peer:InputPeer = payments.StarsRevenueStats;
 payments.getStarsRevenueWithdrawalUrl#13bbe8b3 peer:InputPeer stars:long password:InputCheckPasswordSRP = payments.StarsRevenueWithdrawalUrl;
@@ -2562,7 +2562,7 @@ stats.getBroadcastRevenueTransactions#69280f channel:InputChannel offset:int lim
 
 chatlists.exportChatlistInvite#8472478e chatlist:InputChatlist title:string peers:Vector<InputPeer> = chatlists.ExportedChatlistInvite;
 chatlists.deleteExportedInvite#719c5c5e chatlist:InputChatlist slug:string = Bool;
-chatlists.editExportedInvite#653db63d flags:# revoked:flags.0?true chatlist:InputChatlist slug:string title:flags.1?string peers:flags.2?Vector<RPC.InputPeer> = ExportedChatlistInvite;
+chatlists.editExportedInvite#653db63d flags:# revoked:flags.0?true chatlist:InputChatlist slug:string title:flags.1?string peers:flags.2?Vector<InputPeer> = ExportedChatlistInvite;
 chatlists.getExportedInvites#ce03da83 chatlist:InputChatlist = chatlists.ExportedInvites;
 chatlists.checkChatlistInvite#41c10fff slug:string = chatlists.ChatlistInvite;
 chatlists.joinChatlistInvite#a6b1e39a slug:string peers:Vector<InputPeer> = Updates;
@@ -2587,7 +2587,7 @@ stories.incrementStoryViews#b2028afb peer:InputPeer id:Vector<int> = Bool;
 stories.getStoryViewsList#7ed23c57 flags:# just_contacts:flags.0?true reactions_first:flags.2?true forwards_first:flags.3?true peer:InputPeer q:flags.1?string id:int offset:string limit:int = stories.StoryViewsList;
 stories.getStoriesViews#28e16cc8 peer:InputPeer id:Vector<int> = stories.StoryViews;
 stories.exportStoryLink#7b8def20 peer:InputPeer id:int = ExportedStoryLink;
-stories.report#19d8eb45 peer:RPC.InputPeer id:Vector<int> option:bytes message:string = Bool;
+stories.report#19d8eb45 peer:InputPeer id:Vector<int> option:bytes message:string = Bool;
 stories.activateStealthMode#57bbd166 flags:# past:flags.0?true future:flags.1?true = Updates;
 stories.sendReaction#7fd736b2 flags:# add_to_recent:flags.0?true peer:InputPeer story_id:int reaction:Reaction = Updates;
 stories.getPeerStories#2c4ada50 peer:InputPeer = stories.PeerStories;
