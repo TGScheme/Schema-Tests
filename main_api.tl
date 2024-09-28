@@ -2098,7 +2098,7 @@ contacts.editCloseFriends#ba6705f0 id:Vector<long> = Bool;
 contacts.setBlocked#94c65c76 flags:# my_stories_from:flags.0?true id:Vector<InputPeer> limit:int = Bool;
 contacts.getBirthdays#daeda864 = contacts.ContactBirthdays;
 contacts.importCard#4fe196fe export_card:Vector<int> = User;
-contacts.exportCard#84e53737 = int;
+contacts.exportCard#84e53737 = Vector<int>;
 
 messages.getMessages#63c66506 id:Vector<InputMessage> = messages.Messages;
 messages.getDialogs#a0f4cb4f flags:# exclude_pinned:flags.0?true folder_id:flags.1?int offset_date:int offset_id:int offset_peer:InputPeer limit:int hash:long = messages.Dialogs;
