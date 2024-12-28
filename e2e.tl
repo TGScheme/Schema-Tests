@@ -22,9 +22,9 @@ decryptedMessageMediaDocument8#b095434b thumb:bytes thumb_w:int thumb_h:int file
 decryptedMessageMediaAudio8#6080758f duration:int size:int key:bytes iv:bytes = DecryptedMessageMedia;
 
 decryptedMessageActionSetMessageTTL#a1733aec ttl_seconds:int = DecryptedMessageAction;
-decryptedMessageActionReadMessages#c4f40be random_ids:Vector<long> = DecryptedMessageAction;
-decryptedMessageActionDeleteMessages#65614304 random_ids:Vector<long> = DecryptedMessageAction;
-decryptedMessageActionScreenshotMessages#8ac1f475 random_ids:Vector<long> = DecryptedMessageAction;
+decryptedMessageActionReadMessages#c4f40be random_ids:long = DecryptedMessageAction;
+decryptedMessageActionDeleteMessages#65614304 random_ids:long = DecryptedMessageAction;
+decryptedMessageActionScreenshotMessages#8ac1f475 random_ids:long = DecryptedMessageAction;
 decryptedMessageActionFlushHistory#6719e45c = DecryptedMessageAction;
 
 // layer 17
@@ -73,7 +73,7 @@ photoCachedSize#e9a734fa type:string location:FileLocation w:int h:int bytes:byt
 fileLocationUnavailable#7c596b46 volume_id:long local_id:int secret:long = FileLocation;
 fileLocation#53d69076 dc_id:int volume_id:long local_id:int secret:long = FileLocation;
 
-decryptedMessageMediaExternalDocument#fa95b0dd id:long access_hash:long date:int mime_type:string size:int thumb:PhotoSize dc_id:int attributes:Vector<DocumentAttribute> = DecryptedMessageMedia;
+decryptedMessageMediaExternalDocument#fa95b0dd id:long access_hash:long date:int mime_type:string size:int thumb:PhotoSize dc_id:int attributes:DocumentAttribute = DecryptedMessageMedia;
 
 // layer 45
 decryptedMessage45#36b091de flags:# random_id:long ttl:int message:string media:flags.9?DecryptedMessageMedia entities:flags.7?Vector<MessageEntity> via_bot_name:flags.11?string reply_to_random_id:flags.3?long = DecryptedMessage;
@@ -120,7 +120,7 @@ messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
 messageEntityBlockquote#20df5d0 offset:int length:int = MessageEntity;
 
 // layer 143
-decryptedMessageMediaDocument#6abd9782 thumb:bytes thumb_w:int thumb_h:int mime_type:string size:long key:bytes iv:bytes attributes:Vector<DocumentAttribute> caption:string = DecryptedMessageMedia;
+decryptedMessageMediaDocument#6abd9782 thumb:bytes thumb_w:int thumb_h:int mime_type:string size:long key:bytes iv:bytes attributes:DocumentAttribute caption:string = DecryptedMessageMedia;
 
 // layer 144
 messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity;
