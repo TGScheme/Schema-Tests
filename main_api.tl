@@ -9,21 +9,16 @@
 
 ---types---
 
-true#3fedd339 = True;
-
 boolFalse#bc799737 = Bool;
 boolTrue#997275b5 = Bool;
+
+true#3fedd339 = True;
 
 vector#1cb5c415 {t:Type} # [ t ] = Vector t;
 
 error#c4b9f9bb code:int text:string = Error;
 
-ipPort#d433ad73 ipv4:int port:int = IpPort;
-ipPortSecret#37982646 ipv4:int port:int secret:bytes = IpPort;
-
-accessPointRule#4679b65f phone_prefix_rules:string dc_id:int ips:vector<IpPort> = AccessPointRule;
-
-help.configSimple#5a592a6c date:int expires:int rules:vector<AccessPointRule> = help.ConfigSimple;
+null#56730bcc = Null;
 
 inputPeerEmpty#7f3b18ea = InputPeer;
 inputPeerSelf#7da07ec9 = InputPeer;
@@ -948,7 +943,7 @@ inputWebFileAudioAlbumThumbLocation#f46fe924 flags:# small:flags.2?true document
 upload.webFile#21e753bc size:int mime_type:string file_type:storage.FileType mtime:int bytes:bytes = upload.WebFile;
 
 payments.paymentForm#a0058751 flags:# can_save_credentials:flags.2?true password_missing:flags.3?true form_id:long bot_id:long title:string description:string photo:flags.5?WebDocument invoice:Invoice provider_id:long url:string native_provider:flags.4?string native_params:flags.4?DataJSON additional_methods:flags.6?Vector<PaymentFormMethod> saved_info:flags.0?PaymentRequestedInfo saved_credentials:flags.1?Vector<PaymentSavedCredentials> users:Vector<User> = payments.PaymentForm;
-payments.paymentFormStars#7bf6b15c flags:# can_save_credentials:flags.2?true password_missing:flags.3?true form_id:long bot_id:long title:string description:string photo:flags.5?WebDocument invoice:Invoice users:Vector<User> = payments.PaymentForm;
+payments.paymentFormStars#7bf6b15c flags:# can_save_credentials:flags.2?true form_id:long password_missing:flags.3?true bot_id:long title:string description:string photo:flags.5?WebDocument invoice:Invoice users:Vector<User> = payments.PaymentForm;
 payments.paymentFormStarGift#b425cfe1 form_id:long invoice:Invoice = payments.PaymentForm;
 
 payments.validatedRequestedInfo#d1451883 flags:# id:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = payments.ValidatedRequestedInfo;
@@ -1571,7 +1566,7 @@ defaultHistoryTTL#43b46b20 period:int = DefaultHistoryTTL;
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 
 requestPeerTypeUser#5f3b8a00 flags:# bot:flags.0?Bool premium:flags.1?Bool = RequestPeerType;
-requestPeerTypeChat#c9f06e1b flags:# creator:flags.0?true has_username:flags.3?Bool forum:flags.4?Bool user_admin_rights:flags.1?ChatAdminRights bot_admin_rights:flags.2?ChatAdminRights bot_participant:flags.5?true = RequestPeerType;
+requestPeerTypeChat#c9f06e1b flags:# creator:flags.0?true has_username:flags.3?Bool bot_participant:flags.5?true forum:flags.4?Bool user_admin_rights:flags.1?ChatAdminRights bot_admin_rights:flags.2?ChatAdminRights = RequestPeerType;
 requestPeerTypeBroadcast#339bef6c flags:# creator:flags.0?true has_username:flags.3?Bool user_admin_rights:flags.1?ChatAdminRights bot_admin_rights:flags.2?ChatAdminRights = RequestPeerType;
 
 emojiListNotModified#481eadfa = EmojiList;
@@ -1859,7 +1854,7 @@ starsTransactionPeerAPI#f9677aad = StarsTransactionPeer;
 
 starsTopupOption#bd915c0 flags:# extended:flags.1?true stars:long store_product:flags.0?string currency:string amount:long = StarsTopupOption;
 
-starsTransaction#64dfc926 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true subscription:flags.12?true floodskip:flags.15?true id:string stars:StarsAmount date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift floodskip_number:flags.15?int starref_commission_permille:flags.16?int starref_peer:flags.17?Peer starref_amount:flags.17?StarsAmount = StarsTransaction;
+starsTransaction#64dfc926 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true subscription:flags.12?true id:string floodskip:flags.15?true stars:StarsAmount date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift floodskip_number:flags.15?int starref_commission_permille:flags.16?int starref_peer:flags.17?Peer starref_amount:flags.17?StarsAmount = StarsTransaction;
 
 payments.starsStatus#6c9ce8ed flags:# balance:StarsAmount subscriptions:flags.1?Vector<StarsSubscription> subscriptions_next_offset:flags.2?string subscriptions_missing_balance:flags.4?long history:flags.3?Vector<StarsTransaction> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.StarsStatus;
 
@@ -1868,8 +1863,6 @@ foundStory#e87acbc0 peer:Peer story:StoryItem = FoundStory;
 stories.foundStories#e2de7737 flags:# count:int stories:Vector<FoundStory> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = stories.FoundStories;
 
 geoPointAddress#de4c5d93 flags:# country_iso2:string state:flags.0?string city:flags.1?string street:flags.2?string = GeoPointAddress;
-
-starsRevenueStatus#febe5491 flags:# withdrawal_enabled:flags.0?true current_balance:StarsAmount available_balance:StarsAmount overall_revenue:StarsAmount next_withdrawal_at:flags.1?int = StarsRevenueStatus;
 
 payments.starsRevenueStats#c92bb73b revenue_graph:StatsGraph status:StarsRevenueStatus usd_rate:double = payments.StarsRevenueStats;
 
@@ -1918,8 +1911,6 @@ messages.preparedInlineMessage#ff57708d query_id:long result:BotInlineResult pee
 
 botAppSettings#c99b1950 flags:# placeholder_path:flags.0?bytes background_color:flags.1?int background_dark_color:flags.2?int header_color:flags.3?int header_dark_color:flags.4?int = BotAppSettings;
 
-null#56730bcc = Null;
-
 connectedBotStarRef#19a13f71 flags:# revoked:flags.1?true url:string date:int bot_id:long commission_permille:int duration_months:flags.0?int participants:long revenue:long = ConnectedBotStarRef;
 
 messages.messageEmpty#3f4e0648 = messages.MessageEmpty;
@@ -1937,11 +1928,15 @@ starsAmount#bbb6b4a3 amount:long nanos:int = StarsAmount;
 
 starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_months:flags.0?int end_date:flags.1?int daily_revenue_per_user:flags.2?StarsAmount = StarRefProgram;
 
+ipPortSecret#37982646 ipv4:int port:int secret:bytes = IpPort;
+ipPort#d433ad73 ipv4:int port:int = IpPort;
+
+accessPointRule#4679b65f phone_prefix_rules:string dc_id:int ips:vector<IpPort> = AccessPointRule;
+
+help.configSimple#5a592a6c date:int expires:int rules:vector<AccessPointRule> = help.ConfigSimple;
+
 ---functions---
 
-invokeWithBusinessConnection#dd289f8e {X:Type} connection_id:string query:!X = X;
-invokeWithGooglePlayIntegrity#1df92984 {X:Type} nonce:string token:string query:!X = X;
-invokeWithApnsSecret#dae54f8 {X:Type} nonce:string secret:string query:!X = X;
 invokeAfterMsg#cb9f372d {X:Type} msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 {X:Type} msg_ids:Vector<long> query:!X = X;
 initConnection#c1cd5ea9 {X:Type} flags:# api_id:int device_model:string system_version:string app_version:string system_lang_code:string lang_pack:string lang_code:string proxy:flags.0?InputClientProxy params:flags.1?JSONValue query:!X = X;
