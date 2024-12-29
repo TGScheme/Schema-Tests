@@ -9,21 +9,16 @@
 
 ---types---
 
-true#3fedd339 = True;
-
 boolFalse#bc799737 = Bool;
 boolTrue#997275b5 = Bool;
+
+true#3fedd339 = True;
 
 vector#1cb5c415 {t:Type} # [ t ] = Vector t;
 
 error#c4b9f9bb code:int text:string = Error;
 
-ipPort#d433ad73 ipv4:int port:int = IpPort;
-ipPortSecret#37982646 ipv4:int port:int secret:bytes = IpPort;
-
-accessPointRule#4679b65f phone_prefix_rules:string dc_id:int ips:vector<IpPort> = AccessPointRule;
-
-help.configSimple#5a592a6c date:int expires:int rules:vector<AccessPointRule> = help.ConfigSimple;
+null#56730bcc = Null;
 
 inputPeerEmpty#7f3b18ea = InputPeer;
 inputPeerSelf#7da07ec9 = InputPeer;
@@ -1937,7 +1932,12 @@ starsAmount#bbb6b4a3 amount:long nanos:int = StarsAmount;
 messages.foundStickersNotModified#6010c534 flags:# next_offset:flags.0?int = messages.FoundStickers;
 messages.foundStickers#82c9e290 flags:# next_offset:flags.0?int hash:long stickers:Vector<Document> = messages.FoundStickers;
 
-null#56730bcc = Null;
+ipPortSecret#37982646 ipv4:int port:int secret:bytes = IpPort;
+ipPort#d433ad73 ipv4:int port:int = IpPort;
+
+accessPointRule#4679b65f phone_prefix_rules:string dc_id:int ips:vector<IpPort> = AccessPointRule;
+
+help.configSimple#5a592a6c date:int expires:int rules:vector<AccessPointRule> = help.ConfigSimple;
 
 starGiftAttributePattern#13acff19 name:string document:Document rarity_permille:int = StarGiftAttribute;
 starGiftAttributeModel#39d99013 name:string document:Document rarity_permille:int = StarGiftAttribute;
@@ -1956,9 +1956,6 @@ botVerification#f93cd45c bot_id:long icon:long description:string = BotVerificat
 
 ---functions---
 
-invokeWithBusinessConnection#dd289f8e {X:Type} connection_id:string query:!X = X;
-invokeWithGooglePlayIntegrity#1df92984 {X:Type} nonce:string token:string query:!X = X;
-invokeWithApnsSecret#dae54f8 {X:Type} nonce:string secret:string query:!X = X;
 invokeAfterMsg#cb9f372d {X:Type} msg_id:long query:!X = X;
 invokeAfterMsgs#3dc4b4f0 {X:Type} msg_ids:Vector<long> query:!X = X;
 initConnection#c1cd5ea9 {X:Type} flags:# api_id:int device_model:string system_version:string app_version:string system_lang_code:string lang_pack:string lang_code:string proxy:flags.0?InputClientProxy params:flags.1?JSONValue query:!X = X;
