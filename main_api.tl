@@ -1949,6 +1949,13 @@ payments.starGiftUpgradePreview#167bd90b sample_attributes:Vector<StarGiftAttrib
 users.usersSlice#315a4974 count:int users:Vector<User> = users.Users;
 users.users#62d706b8 users:Vector<User> = users.Users;
 
+ipPortSecret#37982646 ipv4:int port:int secret:bytes = IpPort;
+ipPort#d433ad73 ipv4:int port:int = IpPort;
+
+accessPointRule#4679b65f phone_prefix_rules:string dc_id:int ips:vector<IpPort> = AccessPointRule;
+
+help.configSimple#5a592a6c date:int expires:int rules:vector<AccessPointRule> = help.ConfigSimple;
+
 savedStarGift#6056dba5 flags:# name_hidden:flags.0?true unsaved:flags.5?true refunded:flags.9?true can_upgrade:flags.10?true from_id:flags.1?Peer date:int gift:StarGift message:flags.2?TextWithEntities msg_id:flags.3?int saved_id:flags.11?long convert_stars:flags.4?long upgrade_stars:flags.6?long can_export_at:flags.7?int transfer_stars:flags.8?long = SavedStarGift;
 
 inputSavedStarGiftUser#69279795 msg_id:int = InputSavedStarGift;
